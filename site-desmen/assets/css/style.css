@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+/* Layout geral com margem */
+.content-wrapper {
+    padding: 60px 50px; /* Mantém as margens internas no conteúdo */
+}
+
+/* Container principal */
+.container-corpo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 50px; /* Mantém as margens no container principal */
+}
+
+/* Estilização do título do vídeo */
+.video-title {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+/* Vídeo */
+.video-container {
+    flex: 1;
+    max-width: 55%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    height: 350px;
+}
+
+/* Container de lançamentos */
+.releases-container {
+    flex: 1;
+    max-width: 45%;
+    padding: 10px;
+    color: white;
+    background: rgb(36, 36, 36);
+    border-radius: 10px;
+}
+
+.releases-container h1 {
+    margin-bottom: 20px;
+}
+
+.releases-container p {
+    margin-top: 20px;
+}
+
+/* Seção de inscrição */
+.subscribe {
+    margin-top: 30px;
+}
+
+/* Último container ocupa 100% da largura da viewport */
+.container-corpo-dois {
+    background: rgb(46, 46, 46);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 200px;
+    width: 100vw; /* 100% da largura da janela de visualização */
+    margin: 0; /* Remove qualquer margem extra */
+    box-sizing: border-box; /* Garante que o padding e a largura sejam aplicados corretamente */
+}
+
+.last-container,
+.shop-merch-container {
+    flex: 1;
+    max-width: 50%;
+    color: white;
+    margin-left: 100px;
+}
+
+/* Links da seção shop */
+.shop-merch-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.shop-merch-container ul li {
+    margin-bottom: 10px;
+}
+
+.shop-merch-container ul li a {
+    font-size: 0.9rem;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.shop-merch-container ul li a:hover {
+    color: #ff6347;
+}
+
+/* Botão de inscrição */
+.subscribe-button {
+    background-color: #a71900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: background-color 0.3s ease;
+    margin-left: 100px;
+}
+
+.subscribe-button:hover {
+    background-color: #ff4500;
+}
+
+/* Galeria de imagens */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px; /* Espaço entre as imagens */
+    margin-top: 20px;
+    padding: 0 50px; /* Mantém as margens internas no body */
+}
+
+.image-gallery img {
+    width: calc(33.33% - 15px); /* Mantém as imagens distribuídas e com espaçamento */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* --------- Responsividade --------- */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    .container-corpo, .container-corpo-dois {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .video-container, .releases-container, .last-container, .shop-merch-container {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .container-corpo {
+        gap: 40px;
+    }
+
+    .container-corpo-dois {
+        gap: 40px;
+        padding-top: 50px;
+    }
+
+    .image-gallery img {
+        width: calc(48% - 15px); /* Duas colunas em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container iframe {
+        height: 200px;
+    }
+
+    .subscribe-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .image-gallery img {
+        width: 100%; /* Uma coluna em smartphones */
+    }
+}

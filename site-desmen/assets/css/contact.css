@@ -1,0 +1,59 @@
+/* Estilo geral */
+*{
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+body {
+    padding: 0 60px; /* Mantém as margens internas no body */
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* Container das imagens */
+  .image-slider {
+    overflow: hidden;
+    width: 100%;  /* Define a largura para 300 pixels */
+    height: 250px; /* Define a altura para 150 pixels */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Container para fazer as imagens correrem */
+  .image-container {
+    display: flex;
+    animation: slide 5s linear infinite; /* Animação para mover as imagens */
+  }
+  
+  /* Estilo das imagens */
+  .image-container img {
+    width: 200px;
+    margin-right: 10px;
+    /*animation: rotate 5s infinite linear; para colocar ela rodando*/
+  }
+  
+  /* Animação para mover as imagens lateralmente */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200px);
+    }
+  }
+  
+  /* Animação para girar as imagens */
+ /* @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  */
+
+
+  

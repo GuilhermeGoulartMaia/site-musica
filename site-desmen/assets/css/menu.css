@@ -1,0 +1,62 @@
+.menu{
+    position: fixed;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    width: calc(100% - 100px);
+    z-index: 1;
+    border-bottom: 0.15rem solid var(--light-grey-color);
+    padding-bottom: 0rem;
+    background: black;
+}
+.menu-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu h1, a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    position: center;
+    margin-left: 12px;
+}
+.menu nav ul li a{
+    font-size: 1rem;
+}
+.menu ul li a{
+    display: flex;
+    padding: 1.5rem;
+    font-size: 1.3rem;
+    position: relative;
+    transition: transform 300ms ease-in-out;
+}
+
+.menu ul li a:hover{
+    transform: scale(0.9);
+}
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    left: 50%; /* Alinha à esquerda do link */
+    right: 0; /* Permite que a largura seja centralizada */
+    bottom: 0; /* Posiciona a linha exatamente na parte inferior do link */
+    width: 0; /* A largura inicial é 0 para criar o efeito de transição */
+    height: 0.15rem; /* Define a altura da linha */
+    background: red; /* Cor de fundo vermelha para a linha */
+    transition: width 300ms ease-in-out; /* A transição afeta apenas a largura */
+}
+
+
+.menu ul li a:hover::after{
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
